@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaman Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobileNav">
+  <button class="close-btn" id="closeMenu"><i class="bi bi-x-lg"></i></button>
+  <a href="index.html">Inicio</a>
+  <a href="pages/nosotros.html">Nosotros</a>
+  <a href="#destinos">Destinos</a>
+  <a href="#cotizar">Cotizar</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- NAVBAR -->
+<header class="navbar transparent" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html">
+      <img src="img/logoSinfondo.png" alt="Shaman Travel" class="logo-img">      
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="pages/nosotros.html">Nosotros</a></li>
+      <li><a href="#destinos">Destinos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#cotizar" class="btn-cotizar">Cotizar Viaje</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-logo-bg"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-badge">&#10022; Agencia de Viajes Certificada</div>
+    <h1>Viaja con el<br><em>alma libre</em></h1>
+    <p class="hero-sub">Destinos Mexico &amp; Colombia</p>
+    <p>Creamos experiencias de viaje unicas y personalizadas. Descubre los destinos mas increibles de Mexico y Colombia con la tranquilidad de un equipo experto a tu lado.</p>
+    <div class="hero-btns">
+      <a href="#destinos" class="btn-primary">Explorar Destinos</a>
+      <a href="#cotizar" class="btn-outline">Cotizar mi Viaje</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    
+  </div>
+</section>
+
+
+<!-- COTIZAR -->
+<section class="cotizar" id="cotizar">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Planea tu aventura</span>
+      <h2>Reserva tu Viaje</h2>
+      <div class="divider"></div>
+      <!-- <p>Completa el formulario y recibe una cotizacion personalizada sin costo.</p> -->
+    </div>
+    <div class="form-container reveal">
+      <form id="quoteForm">
+        <div class="form-grid">
+          <!-- <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Telefono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+52 844 123 4567">
+          </div> -->
+          <div class="form-group">
+            <label for="destino">Destino de interes</label>
+            <select id="destino" name="destino" required>
+              <option value="" disabled selected>Selecciona un destino</option>
+              <option value="los-cabos">Los Cabos</option>
+              <option value="cancun">Cancun</option>
+              <option value="puerto-vallarta">Puerto Vallarta</option>
+              <option value="mazatlan">Mazatlan</option>
+              <option value="tulum">Tulum</option>
+              <option value="puerto-escondido">Puerto Escondido</option>
+              <option value="colombia">Colombia</option>
+              <option value="otro">Otro / Multiples destinos</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="salida">Fecha de salida</label>
+            <input type="date" id="salida" name="salida" required>
+          </div>
+          <div class="form-group">
+            <label for="regreso">Fecha de regreso</label>
+            <input type="date" id="regreso" name="regreso" required>
+          </div>
+          <div class="form-group">
+            <label for="adultos">Numero de adultos</label>
+            <input type="number" id="adultos" name="adultos" min="1" max="20" placeholder="1" required>
+          </div>
+          <div class="form-group">
+            <label for="numMenores">Numero de menores (0-17 anos)</label>
+            <input type="number" id="numMenores" name="numMenores" min="0" max="10" placeholder="0">
+          </div>
+          <div class="menores-section" id="menoresSection">
+            <h4>&#10022; Edades de los menores</h4>
+            <div class="edades-grid" id="edadesContainer"></div>
+          </div>
+          <!-- <div class="form-group full">
+            <label for="notas">Preferencias o comentarios adicionales</label>
+            <textarea id="notas" name="notas" placeholder="Cuentanos sobre tus preferencias: tipo de hotel, actividades, necesidades especiales..." rows="3"></textarea>
+          </div> -->
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">Solicitar Cotizacion Gratuita</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MISION / VISION / OBJETIVO -->
+<!-- <section class="mvision" id="mvision">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Nuestra Esencia</span>
+      <h2>Lo que nos mueve</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="mv-card reveal reveal-delay-1">
+        <div class="mv-icon">&#128203;</div>
+        <h3>Mision</h3>
+        <p>Conectar a nuestros viajeros con las maravillas del mundo, ofreciendo servicios turisticos personalizados, seguros y memorables que superen sus expectativas y creen experiencias transformadoras de vida.</p>
+      </div>
+      <div class="mv-card reveal reveal-delay-2">
+        <div class="mv-icon">&#127756;</div>
+        <h3>Vision</h3>
+        <p>Ser la agencia de viajes de referencia en Mexico y Latinoamerica, reconocida por la calidad excepcional de nuestros servicios, la autenticidad de nuestras experiencias y la profunda satisfaccion de nuestros clientes.</p>
+      </div>
+      <div class="mv-card reveal reveal-delay-3">
+        <div class="mv-icon">&#127919;</div>
+        <h3>Objetivo</h3>
+        <p>Disenar y gestionar viajes unicos e irrepetibles que conecten a cada viajero con la esencia de cada destino, respetando el medio ambiente, las culturas locales y el bienestar de nuestros clientes.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- SOBRE NOSOTROS -->
+<section class="about-home" id="sobre">
+  <div class="container">
+    <div class="about-flex">
+      <div class="about-visual reveal">
+        <div class="about-img-main">
+          <img src="img/logoSinfondo.png" alt="Shaman Travel" class="about-logo">
+        </div>
+        <div class="about-badge">
+          <div class="num">10+</div>
+          <div class="label">Años de Experiencia</div>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <span class="section-tag">Quienes somos</span>
+        <h2>Mas que una agencia,<br>somos tus companeros<br>de aventura</h2>
+        <p>Shaman Travel nacio de la pasion por descubrir, explorar y compartir los destinos mas extraordinarios de Mexico y Colombia. Somos un equipo de viajeros apasionados que convertimos los suenos en itinerarios reales.</p>
+        <p>Con mas de una decada de experiencia, hemos ayudado a miles de familias y viajeros a crear memorias que duran toda la vida, cuidando cada detalle con amor y profesionalismo.</p>
+        <div class="about-features">
+          <div class="feature-item">Paquetes personalizados</div>
+          <div class="feature-item">Atencion 24/7</div>
+          <div class="feature-item">Mejores precios garantizados</div>
+          <div class="feature-item">Viajes seguros y certificados</div>
+          <div class="feature-item">Guias especializados</div>
+          <div class="feature-item">Mas de 5,000 clientes felices</div>
+        </div>
+        <br>
+        <a href="pages/nosotros.html" class="btn-primary" style="display:inline-block;margin-top:8px;">Conocer mas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINOS -->
+<section class="destinations" id="destinos">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Descubre el mundo</span>
+      <h2>Nuestros Destinos</h2>
+      <div class="divider"></div>
+      <p>Paraisos de playa, junglas milenarias y ciudades vibrantes. Elige tu proxima aventura.</p>
+    </div>
+    <div class="dest-grid">
+      <div class="dest-card reveal reveal-delay-1">
+        <div class="dest-img dest-bg-cabos">
+          <div class="dest-overlay"></div>
+          <!-- <span style="position:relative;z-index:1;font-size:4rem">&#127958;</span> -->
+        </div>
+        <div class="dest-body">
+          <div class="dest-country">&#127474;&#127485; Baja California Sur, Mexico</div>
+          <h3>Los Cabos</h3>
+          <p>Donde el desierto abraza el mar. Playas de lujo, buceo de clase mundial y una vibrante vida nocturna.</p>
+          <a href="pages/los-cabos.html" class="btn-details">Ver detalles <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-2">
+        <div class="dest-img dest-bg-cancun">
+          <div class="dest-overlay"></div>
+          <!-- <span style="position:relative;z-index:1;font-size:4rem">&#127754;</span> -->
+        </div>
+        <div class="dest-body">
+          <div class="dest-country">&#127474;&#127485; Quintana Roo, Mexico</div>
+          <h3>Cancun</h3>
+          <p>El caribe mexicano en todo su esplendor. Aguas turquesas, ruinas mayas y hoteles de ensueno.</p>
+          <!-- <a href="pages/cancun.html" class="btn-details">Ver detalles <i class="bi bi-arrow-right"></i></a> -->
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-3">
+        <div class="dest-img dest-bg-vallarta">
+          <div class="dest-overlay"></div>
+          <!-- <span style="position:relative;z-index:1;font-size:4rem">&#9973;</span> -->
+        </div>
+        <div class="dest-body">
+          <div class="dest-country">&#127474;&#127485; Jalisco, Mexico</div>
+          <h3>Puerto Vallarta</h3>
+          <p>La joya del Pacifico. Arte, gastronomia, playas escondidas y la magia del Malecon al atardecer.</p>
+          <!-- <a href="pages/puerto-vallarta.html" class="btn-details">Ver detalles <i class="bi bi-arrow-right"></i></a> -->
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-1">
+        <div class="dest-img dest-bg-mazatlan">
+          <div class="dest-overlay"></div>
+          <!-- <span style="position:relative;z-index:1;font-size:4rem">&#129424;</span> -->
+        </div>
+        <div class="dest-body">
+          <div class="dest-country">&#127474;&#127485; Sinaloa, Mexico</div>
+          <h3>Mazatlan</h3>
+          <p>La perla del Pacifico. Gastronomia de mariscos, arquitectura colonial y playas infinitas.</p>
+          <!-- <a href="pages/mazatlan.html" class="btn-details">Ver detalles <i class="bi bi-arrow-right"></i></a> -->
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-2">
+        <div class="dest-img dest-bg-tulum">
+          <div class="dest-overlay"></div>
+          <!-- <span style="position:relative;z-index:1;font-size:4rem">&#127963;</span> -->
+        </div>
+        <div class="dest-body">
+          <div class="dest-country">&#127474;&#127485; Quintana Roo, Mexico</div>
+          <h3>Tulum</h3>
+          <p>Misticismo maya en la costa del Caribe. Ruinas frente al mar, cenotes cristalinos y eco-glamour.</p>
+          <!-- <a href="pages/tulum.html" class="btn-details">Ver detalles <i class="bi bi-arrow-right"></i></a> -->
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-3">
+        <div class="dest-img dest-bg-escondido">
+          <div class="dest-overlay"></div>
+          <!-- <span style="position:relative;z-index:1;font-size:4rem">&#127940;</span> -->
+        </div>
+        <div class="dest-body">
+          <div class="dest-country">&#127474;&#127485; Oaxaca, Mexico</div>
+          <h3>Puerto Escondido</h3>
+          <p>El paraiso del surf. Olas legendarias, cultura zapoteca, bioluminiscencia y puestas de sol epicas.</p>
+          <!-- <a href="pages/puerto-escondido.html" class="btn-details">Ver detalles <i class="bi bi-arrow-right"></i></a> -->
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-1" style="grid-column:1/-1;max-width:420px;margin:0 auto;">
+        <div class="dest-img dest-bg-colombia" style="height:300px;">
+          <div class="dest-overlay"></div>
+          <!-- <span style="position:relative;z-index:1;font-size:4rem">&#127802;</span> -->
+        </div>
+        <div class="dest-body">
+          <div class="dest-country">&#127464;&#127476; Colombia, Sudamerica</div>
+          <h3>Colombia</h3>
+          <p>La tierra de la alegria eterna. Cartagena de Indias, el Eje Cafetero, Medellin y la magia del Caribe colombiano.</p>
+          <!-- <a href="pages/colombia.html" class="btn-details">Ver detalles <i class="bi bi-arrow-right"></i></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Resolvemos tus dudas</span>
+      <h2>Preguntas Frecuentes</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Como funciona el proceso de cotizacion?</h4>
+          <div class="faq-icon"><i class="bi bi-plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <p>Es muy sencillo. Completa nuestro formulario de cotizacion con tu destino, fechas y numero de viajeros. En menos de 24 horas, uno de nuestros asesores especializados te contactara con una propuesta personalizada y sin compromiso.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Que incluyen los paquetes de viaje?</h4>
+          <div class="faq-icon"><i class="bi bi-plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <p>Nuestros paquetes pueden incluir vuelos, hotel, traslados aeropuerto, tours y actividades, seguro de viaje y asistencia 24/7. Cada paquete es personalizado segun tus necesidades y presupuesto. Te especificamos exactamente que incluye tu cotizacion antes de cualquier pago.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Cual es la politica de cancelacion?</h4>
+          <div class="faq-icon"><i class="bi bi-plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <p>Entendemos que los planes pueden cambiar. Cancelaciones con mas de 30 dias de anticipacion tienen reembolso del 80%. Entre 15-30 dias, 50%. Menos de 15 dias, segun las politicas del proveedor. Siempre recomendamos contratar seguro de viaje para mayor proteccion.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Ofrecen viajes para grupos o empresas?</h4>
+          <div class="faq-icon"><i class="bi bi-plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <p>Si! Somos especialistas en viajes grupales, convenciones, teambuilding e incentivos empresariales. Contamos con tarifas especiales a partir de 10 personas y podemos organizar eventos completos con logistica personalizada.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Necesito pasaporte para viajar a Colombia?</h4>
+          <div class="faq-icon"><i class="bi bi-plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <p>Los ciudadanos mexicanos pueden viajar a Colombia con su pasaporte vigente sin necesidad de visa, por hasta 90 dias. Te recomendamos que tu pasaporte tenga al menos 6 meses de vigencia al momento del viaje. Nuestro equipo te guiara en todos los requisitos de documentacion.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Cuando es la mejor epoca para viajar?</h4>
+          <div class="faq-icon"><i class="bi bi-plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <p>Cada destino tiene su temporada ideal. En general, noviembre a abril son excelentes para el Caribe mexicano y Los Cabos. Puerto Escondido es mejor de mayo a octubre para el surf. Colombia tiene clima agradable todo el ano. En la ficha de cada destino encontraras informacion detallada sobre el clima.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Ofrecen seguro de viaje?</h4>
+          <div class="faq-icon"><i class="bi bi-plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <p>Si, trabajamos con las principales aseguradoras de viaje y podemos incluirlo en tu paquete. El seguro cubre asistencia medica, cancelaciones, perdida de equipaje y mas. Altamente recomendado para viajes internacionales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Hablemos</span>
+      <h2>Contactanos</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Estamos aqui para ayudarte</h3>
+        <p>Nuestro equipo de asesores esta disponible para responder todas tus preguntas y ayudarte a planear el viaje de tus suenos.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="c-icon">&#128205;</div>
+            <div>
+              <div class="c-label">Direccion</div>
+              <div class="c-value">Av. Reforma 1234, Col. Centro<br>Torreon, Coahuila, Mexico</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">&#128222;</div>
+            <div>
+              <div class="c-label">Telefono</div>
+              <div class="c-value">+52 (844) 123-4567</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">&#128172;</div>
+            <div>
+              <div class="c-label">WhatsApp</div>
+              <div class="c-value">+52 (844) 987-6543</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">&#9993;</div>
+            <div>
+              <div class="c-label">Email</div>
+              <div class="c-value">hola@shamantravel.mx</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">&#128336;</div>
+            <div>
+              <div class="c-label">Horario</div>
+              <div class="c-value">Lunes a Viernes: 9am - 7pm<br>Sabados: 10am - 2pm</div>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-link" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-link" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="social-link" title="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-2">
+        <h4>Envianos un mensaje</h4>
+        <form id="contactForm">
+          <div class="cf-group">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="cf-group">
+            <label>Correo electronico</label>
+            <input type="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+          <div class="cf-group">
+            <label>Asunto</label>
+            <input type="text" placeholder="En que podemos ayudarte?">
+          </div>
+          <div class="cf-group">
+            <label>Mensaje</label>
+            <textarea rows="5" placeholder="Cuentanos sobre tu consulta..." required></textarea>
+          </div>
+          <button type="submit" class="btn-send">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Shaman Travel" class="footer-logo-img">
+        <p>Transformamos viajes en experiencias que cambian vidas. Mas de 10 anos conectando personas con los destinos mas extraordinarios de Mexico y Colombia.</p>
+        <br>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Destinos</h5>
+        <ul class="footer-links">
+          <li><a href="pages/los-cabos.html">Los Cabos</a></li>
+          <li><a href="pages/cancun.html">Cancun</a></li>
+          <li><a href="pages/puerto-vallarta.html">Puerto Vallarta</a></li>
+          <li><a href="pages/mazatlan.html">Mazatlan</a></li>
+          <li><a href="pages/tulum.html">Tulum</a></li>
+          <li><a href="pages/puerto-escondido.html">Puerto Escondido</a></li>
+          <li><a href="pages/colombia.html">Colombia</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Agencia</h5>
+        <ul class="footer-links">
+          <li><a href="pages/nosotros.html">Nosotros</a></li>
+          <li><a href="#cotizar">Cotizar Viaje</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul class="footer-links">
+          <li><a href="tel:+528441234567">+52 (844) 123-4567</a></li>
+          <li><a href="mailto:hola@shamantravel.mx">hola@shamantravel.mx</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Torreon, Coahuila</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Shaman Travel. Todos los derechos reservados.</p>
+      <p>Hecho con amor para viajeros apasionados</p>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script>AOS.init({ duration: 800, once: true, offset: 80 });</script>
+</body>
+</html>
