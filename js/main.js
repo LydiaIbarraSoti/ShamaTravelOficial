@@ -19,17 +19,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== MOBILE MENU =====
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobileNav');
-  const closeBtn = document.getElementById('closeMenu');
+  
 
-  if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
-    closeBtn?.addEventListener('click', () => mobileNav.classList.remove('open'));
-    mobileNav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => mobileNav.classList.remove('open'));
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobileNav");
+  const closeMenu = document.getElementById("closeMenu");
+
+  if (hamburger && mobileNav && closeMenu) {
+
+  hamburger.addEventListener("click", () => {
+    mobileNav.classList.add("active");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileNav.classList.remove("active");
+  });
+
+  mobileNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("active");
     });
-  }
+  });
+
+}
+
+  
+  
+    
+ 
 
   // ===== FAQ ACCORDION =====
   document.querySelectorAll('.faq-question').forEach(q => {
@@ -133,5 +150,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ===== SLIDER PREMIUM =====
+  const slidesHero = document.querySelectorAll(".slide");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+
+  if (slidesHero.length && nextBtn && prevBtn) {
+
+    let current = 0;
+
+    function showSlide(index) {
+      slidesHero.forEach(slide => slide.classList.remove("active"));
+      slidesHero[index].classList.add("active");
+    }
+
+    nextBtn.addEventListener("click", () => {
+      current = (current + 1) % slidesHero.length;
+      showSlide(current);
+    });
+
+    prevBtn.addEventListener("click", () => {
+      current = (current - 1 + slidesHero.length) % slidesHero.length;
+      showSlide(current);
+    });
+
+    setInterval(() => {
+      current = (current + 1) % slidesHero.length;
+      showSlide(current);
+    }, 6000);
+  }
 
 });

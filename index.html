@@ -12,14 +12,23 @@
 
 <!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobileNav">
-  <button class="close-btn" id="closeMenu"><i class="bi bi-x-lg"></i></button>
+  <button class="close-btn" id="closeMenu">
+    <i class="bi bi-x-lg"></i>
+  </button>
+
   <a href="index.html">Inicio</a>
   <a href="pages/nosotros.html">Nosotros</a>
-  <a href="#destinos">Destinos</a>
-  <a href="#cotizar">Cotizar</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contacto">Contacto</a>
+  <a href="index.html#destinos">Destinos</a>
+  <a href="index.html#cotizar">Cotizar</a>
+  <a href="pages/faq.html">FAQ</a>
+  <a href="index.html#contacto">Contacto</a>
 </nav>
+
+<!-- <div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div> -->
 
 <!-- NAVBAR -->
 <header class="navbar transparent" id="navbar">
@@ -32,7 +41,7 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="pages/nosotros.html">Nosotros</a></li>
       <li><a href="#destinos">Destinos</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="pages/faq.html">FAQ</a></li>
       <li><a href="#contacto">Contacto</a></li>
       <li><a href="#cotizar" class="btn-cotizar">Cotizar Viaje</a></li>
     </ul>
@@ -43,7 +52,7 @@
 </header>
 
 <!-- HERO -->
-<section class="hero" id="inicio">
+<!-- <section class="hero" id="inicio">
   <div class="hero-logo-bg"></div>
   <div class="hero-bg"></div>
   <div class="hero-pattern"></div>
@@ -61,77 +70,88 @@
     <div class="scroll-line"></div>
     
   </div>
+</section> -->
+
+<section class="hero-slider">
+
+  <div class="slider-container">
+
+    <div class="slide active">
+      <img src="img/destinos/loscabos.jpg" alt="Los Cabos">
+
+      <div class="slide-center">
+        <img src="img/logoSinfondo.png" alt="Shaman Travel">
+        <!-- <span>Los Cabos</span> -->
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="img/destinos/cancun2.webp" alt="Cancún">
+      <div class="slide-center">
+        <img src="img/logoSinfondo.png" alt="Shaman Travel">
+        <!-- <span>Cancún</span> -->
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="img/destinos/TULUM-1.jpg" alt="Tulum">
+      <div class="slide-center">
+        <img src="img/logoSinfondo.png" alt="Shaman Travel">
+        <!-- <span>Tulum</span> -->
+      </div>
+    </div>
+
+    <!-- Flechas -->
+    <button class="slider-btn prev">&#10094;</button>
+    <button class="slider-btn next">&#10095;</button>
+
+  </div>
+
 </section>
 
 
 <!-- COTIZAR -->
-<section class="cotizar" id="cotizar">
-  <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">Planea tu aventura</span>
-      <h2>Reserva tu Viaje</h2>
-      <div class="divider"></div>
-      <!-- <p>Completa el formulario y recibe una cotizacion personalizada sin costo.</p> -->
+<section id="cotizar" class="quote-section">
+  <div class="quote-box">
+
+    <div class="quote-grid">
+
+      <div class="field">
+        <label>¿A dónde quieres viajar?</label>
+        <input type="text" placeholder="Ingresa el destino">
+      </div>
+
+      <div class="field small">
+        <label>Desde</label>
+        <input type="date">
+      </div>
+
+      <div class="field small">
+        <label>Hasta</label>
+        <input type="date">
+      </div>
+
+      <div class="field small">
+        <label>Adultos</label>
+        <input type="number" value="2" min="1">
+      </div>
+
+      <div class="field small">
+        <label>Menores</label>
+        <input type="number" value="0" min="0">
+      </div>
+
+      <div class="field">
+        <label>Nacionalidad</label>
+        <input type="text" placeholder="México">
+      </div>
+
     </div>
-    <div class="form-container reveal">
-      <form id="quoteForm">
-        <div class="form-grid">
-          <!-- <div class="form-group">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Correo electronico</label>
-            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-          </div>
-          <div class="form-group">
-            <label for="telefono">Telefono / WhatsApp</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+52 844 123 4567">
-          </div> -->
-          <div class="form-group">
-            <label for="destino">Destino de interes</label>
-            <select id="destino" name="destino" required>
-              <option value="" disabled selected>Selecciona un destino</option>
-              <option value="los-cabos">Los Cabos</option>
-              <option value="cancun">Cancun</option>
-              <option value="puerto-vallarta">Puerto Vallarta</option>
-              <option value="mazatlan">Mazatlan</option>
-              <option value="tulum">Tulum</option>
-              <option value="puerto-escondido">Puerto Escondido</option>
-              <option value="colombia">Colombia</option>
-              <option value="otro">Otro / Multiples destinos</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="salida">Fecha de salida</label>
-            <input type="date" id="salida" name="salida" required>
-          </div>
-          <div class="form-group">
-            <label for="regreso">Fecha de regreso</label>
-            <input type="date" id="regreso" name="regreso" required>
-          </div>
-          <div class="form-group">
-            <label for="adultos">Numero de adultos</label>
-            <input type="number" id="adultos" name="adultos" min="1" max="20" placeholder="1" required>
-          </div>
-          <div class="form-group">
-            <label for="numMenores">Numero de menores (0-17 anos)</label>
-            <input type="number" id="numMenores" name="numMenores" min="0" max="10" placeholder="0">
-          </div>
-          <div class="menores-section" id="menoresSection">
-            <h4>&#10022; Edades de los menores</h4>
-            <div class="edades-grid" id="edadesContainer"></div>
-          </div>
-          <!-- <div class="form-group full">
-            <label for="notas">Preferencias o comentarios adicionales</label>
-            <textarea id="notas" name="notas" placeholder="Cuentanos sobre tus preferencias: tipo de hotel, actividades, necesidades especiales..." rows="3"></textarea>
-          </div> -->
-        </div>
-        <div class="form-submit">
-          <button type="submit" class="btn-primary">Solicitar Cotizacion Gratuita</button>
-        </div>
-      </form>
+
+    <div class="quote-button">
+      <button class="btn-primary">Buscar</button>
     </div>
+
   </div>
 </section>
 
@@ -296,81 +316,7 @@
 
 
 
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">Resolvemos tus dudas</span>
-      <h2>Preguntas Frecuentes</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="faq-list reveal">
-      <div class="faq-item">
-        <div class="faq-question">
-          <h4>Como funciona el proceso de cotizacion?</h4>
-          <div class="faq-icon"><i class="bi bi-plus"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>Es muy sencillo. Completa nuestro formulario de cotizacion con tu destino, fechas y numero de viajeros. En menos de 24 horas, uno de nuestros asesores especializados te contactara con una propuesta personalizada y sin compromiso.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          <h4>Que incluyen los paquetes de viaje?</h4>
-          <div class="faq-icon"><i class="bi bi-plus"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>Nuestros paquetes pueden incluir vuelos, hotel, traslados aeropuerto, tours y actividades, seguro de viaje y asistencia 24/7. Cada paquete es personalizado segun tus necesidades y presupuesto. Te especificamos exactamente que incluye tu cotizacion antes de cualquier pago.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          <h4>Cual es la politica de cancelacion?</h4>
-          <div class="faq-icon"><i class="bi bi-plus"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>Entendemos que los planes pueden cambiar. Cancelaciones con mas de 30 dias de anticipacion tienen reembolso del 80%. Entre 15-30 dias, 50%. Menos de 15 dias, segun las politicas del proveedor. Siempre recomendamos contratar seguro de viaje para mayor proteccion.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          <h4>Ofrecen viajes para grupos o empresas?</h4>
-          <div class="faq-icon"><i class="bi bi-plus"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>Si! Somos especialistas en viajes grupales, convenciones, teambuilding e incentivos empresariales. Contamos con tarifas especiales a partir de 10 personas y podemos organizar eventos completos con logistica personalizada.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          <h4>Necesito pasaporte para viajar a Colombia?</h4>
-          <div class="faq-icon"><i class="bi bi-plus"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>Los ciudadanos mexicanos pueden viajar a Colombia con su pasaporte vigente sin necesidad de visa, por hasta 90 dias. Te recomendamos que tu pasaporte tenga al menos 6 meses de vigencia al momento del viaje. Nuestro equipo te guiara en todos los requisitos de documentacion.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          <h4>Cuando es la mejor epoca para viajar?</h4>
-          <div class="faq-icon"><i class="bi bi-plus"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>Cada destino tiene su temporada ideal. En general, noviembre a abril son excelentes para el Caribe mexicano y Los Cabos. Puerto Escondido es mejor de mayo a octubre para el surf. Colombia tiene clima agradable todo el ano. En la ficha de cada destino encontraras informacion detallada sobre el clima.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          <h4>Ofrecen seguro de viaje?</h4>
-          <div class="faq-icon"><i class="bi bi-plus"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>Si, trabajamos con las principales aseguradoras de viaje y podemos incluirlo en tu paquete. El seguro cubre asistencia medica, cancelaciones, perdida de equipaje y mas. Altamente recomendado para viajes internacionales.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- CONTACTO -->
 <section class="contact" id="contacto">
@@ -421,12 +367,12 @@
             </div>
           </div>
         </div>
-        <div class="social-links">
+        <!-- <div class="social-links">
           <a href="#" class="social-link" title="Facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" class="social-link" title="Instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="social-link" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
           <a href="#" class="social-link" title="TikTok"><i class="bi bi-tiktok"></i></a>
-        </div>
+        </div> -->
       </div>
       <div class="contact-form reveal reveal-delay-2">
         <h4>Envianos un mensaje</h4>
@@ -463,10 +409,10 @@
         <p>Transformamos viajes en experiencias que cambian vidas. Mas de 10 anos conectando personas con los destinos mas extraordinarios de Mexico y Colombia.</p>
         <br>
         <div class="social-links">
-          <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="social-link"><i class="bi bi-whatsapp"></i></a>
-          <a href="#" class="social-link"><i class="bi bi-tiktok"></i></a>
+          <a href="#"  class="facebook-footer-btn"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram-footer-btn"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/528449876543" class="whatsapp-footer-btn" target="_blank"><i class="bi bi-whatsapp"></i>            
+          <a href="#" class="tiktok-footer-btn"><i class="bi bi-tiktok"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -495,7 +441,10 @@
         <ul class="footer-links">
           <li><a href="tel:+528441234567">+52 (844) 123-4567</a></li>
           <li><a href="mailto:hola@shamantravel.mx">hola@shamantravel.mx</a></li>
-          <li><a href="#">WhatsApp</a></li>
+          <!-- <a href="https://wa.me/528449876543" class="whatsapp-footer-btn" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+          3341140707
+        </a> -->
           <li><a href="#">Torreon, Coahuila</a></li>
         </ul>
       </div>
