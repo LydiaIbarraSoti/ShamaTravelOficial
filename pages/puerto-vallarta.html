@@ -10,27 +10,32 @@
 </head>
 <body>
 
+<!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobileNav">
-  <button class="close-btn" id="closeMenu"><i class="bi bi-x-lg"></i></button>
+  <button class="close-btn" id="closeMenu">
+    <i class="bi bi-x-lg"></i>
+  </button>
+
   <a href="../index.html">Inicio</a>
   <a href="nosotros.html">Nosotros</a>
   <a href="../index.html#destinos">Destinos</a>
   <a href="../index.html#cotizar">Cotizar</a>
-  <a href="../index.html#faq">FAQ</a>
+  <a href="faq.html">FAQ</a>
   <a href="../index.html#contacto">Contacto</a>
 </nav>
 
 <header class="navbar scrolled" id="navbar">
   <div class="nav-inner">
-    <a href="../index.html" class="logo">
-      <span class="logo-icon">🌿</span>
-      SHAMAN <span>TRAVEL</span>
+    <a href="../index.html">
+      <img src="../img/logoSinfondo.png" alt="Shaman Travel" class="logo-img">
+      <!-- <span class="logo-icon">🌿</span> -->
+      <!-- SHAMAN <span>TRAVEL</span> -->
     </a>
     <ul class="nav-links">
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a href="../index.html#destinos">Destinos</a></li>
-      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="faq.html">FAQ</a></li>
       <li><a href="../index.html#contacto">Contacto</a></li>
       <li><a href="../index.html#cotizar" class="btn-cotizar">Cotizar Viaje</a></li>
     </ul>
@@ -43,8 +48,8 @@
   <div class="dest-hero-overlay"></div>
   <div class="container">
     <div class="dest-hero-tag">🇲🇽 Jalisco, México</div>
-    <h1>⛵ Puerto Vallarta</h1>
-    <p style="color: var(--secondary); font-size:1.1rem; font-style:italic; margin-bottom: 20px;">La joya artística del Pacífico Mexicano</p>
+    <h1>Puerto Vallarta</h1>
+    <p style="color: var(--white); font-size:1.1rem; font-style:italic; margin-bottom: 20px;">La joya artística del Pacífico Mexicano</p>
     <div class="dest-meta">
       <div class="dest-meta-item"><i class="bi bi-geo-alt"></i> Jalisco, México</div>
       <div class="dest-meta-item"><i class="bi bi-star-fill" style="color:var(--secondary)"></i> Destino Premium Shaman Travel</div>
@@ -70,51 +75,67 @@
         <!-- Lugares -->
         <div class="dest-section reveal">
           <h2>Lugares Turísticos Imperdibles</h2>
-          <ul class="places-list">
-            
-          <li>
-            <span class="place-icon">🚶</span>
-            <div>
-              <div class="place-name">El Malecón</div>
-              <div class="place-desc">Paseo costero de 4 km con esculturas de bronce, restaurantes y vida del mar.</div>
+          <div class="places-grid">
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/vallarta/malecon_vallarta.jpg" alt="El Malecón">
+              </div>
+              <div class="place-info">
+                <h3>El Malecón</h3>
+                <p>Paseo costero de 4 km con esculturas de bronce, restaurantes y vida del mar.</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">⛵</span>
-            <div>
-              <div class="place-name">Las Caletas</div>
-              <div class="place-desc">Playa secreta accesible solo en barco, con snorkel y naturaleza virgen.</div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/vallarta/playa-caletas.jpg" alt="Las Caletas">
+              </div>
+              <div class="place-info">
+                <h3>Las Caletas</h3>
+                <p>Playa secreta accesible solo en barco, con snorkel y naturaleza virgen.</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">🦋</span>
-            <div>
-              <div class="place-name">Islas Marietas</div>
-              <div class="place-desc">Reserva de biósfera con la famosa Playa Escondida y santuario de aves.</div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/vallarta/la-playa-escondida-islas-marietas.jpg" alt="Islas Marietas">
+              </div>
+              <div class="place-info">
+                <h3>Islas Marietas</h3>
+                <p>Reserva de biósfera con la famosa Playa Escondida y santuario de aves</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">🎨</span>
-            <div>
-              <div class="place-name">Zona Romántica</div>
-              <div class="place-desc">El barrio más pintoresco con arte, cocina innovadora y ambiente vibrante.</div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/vallarta/zona_romantica_vallarta.jpg" alt="Zona Romántica">
+              </div>
+              <div class="place-info">
+                <h3>Zona Romántica</h3>
+                <p>El barrio más pintoresco con arte, cocina innovadora y ambiente vibrante</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">🌊</span>
-            <div>
-              <div class="place-name">Yelapa</div>
-              <div class="place-desc">Pueblo sin carreteras accesible en barco, con cascada y playas vírgenes.</div>
+
+              <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/vallarta/playa-yelapa-1.jpg" alt="Yelapa">
+              </div>
+              <div class="place-info">
+                <h3>Yelapa</h3>
+                <p>Pueblo sin carreteras accesible en barco, con cascada y playas vírgenes.</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">🐋</span>
-            <div>
-              <div class="place-name">Avistamiento de Delfines</div>
-              <div class="place-desc">La Bahía de Banderas es santuario de delfines, ballenas y mantarrayas.</div>
+
+              <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/vallarta/avistamiento-delfines-vallarta.jpg" alt="Avistamiento de Delfines">
+              </div>
+              <div class="place-info">
+                <h3>Avistamiento de Delfines</h3>
+                <p>La Bahía de Banderas es santuario de delfines, ballenas y mantarrayas.</p>
+              </div>
             </div>
-          </li>
-          </ul>
+          </div>
         </div>
 
         <!-- Recomendaciones -->
@@ -180,12 +201,12 @@
           Cotizar viaje a Puerto Vallarta <i class="bi bi-arrow-right"></i>
         </a>
 
-        <div style="margin-top: 20px; text-align: center;">
+        <!-- <div style="margin-top: 20px; text-align: center;">
           <p style="font-size: 0.8rem; color: var(--text-light);">¿Tienes dudas? Escríbenos</p>
           <a href="https://wa.me/528449876543" style="color: #25D366; font-weight: 600; font-size: 0.9rem;">
             <i class="bi bi-whatsapp"></i> WhatsApp
           </a>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -197,42 +218,53 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo">🌿 SHAMAN <span>TRAVEL</span></div>
-        <p>Transformamos viajes en experiencias que cambian vidas. Más de 10 años conectando personas con destinos extraordinarios.</p>
+        <img src="../img/logoSinfondo.png" alt="Shaman Travel" class="footer-logo-img">
+        <p>Transformamos viajes en experiencias que cambian vidas. Mas de 10 años conectando personas con los destinos mas extraordinarios de Mexico.</p>
+        <br>
+        <div class="social-links">
+          <a href="https://www.facebook.com/shamantravelcancun"  class="facebook-footer-btn"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/shaman_travelmx/" class="instagram-footer-btn"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/5219981109237" class="whatsapp-footer-btn" target="_blank"><i class="bi bi-whatsapp"></i>            
+          <a href="https://www.tiktok.com/@shamantravel?lang=es-419" class="tiktok-footer-btn"><i class="bi bi-tiktok"></i></a>
+        </div>
       </div>
       <div class="footer-col">
         <h5>Destinos</h5>
         <ul class="footer-links">
-          <li><a href="los-cabos.html">Los Cabos</a></li>
-          <li><a href="cancun.html">Cancún</a></li>
-          <li><a href="puerto-vallarta.html">Puerto Vallarta</a></li>
-          <li><a href="mazatlan.html">Mazatlán</a></li>
-          <li><a href="tulum.html">Tulum</a></li>
-          <li><a href="puerto-escondido.html">Puerto Escondido</a></li>
-          <li><a href="colombia.html">Colombia</a></li>
+          <li><a href="pages/los-cabos.html">Los Cabos</a></li>
+          <li><a href="pages/cancun.html">Cancun</a></li>
+          <li><a href="pages/puerto-vallarta.html">Puerto Vallarta</a></li>
+          <li><a href="pages/mazatlan.html">Mazatlan</a></li>
+          <li><a href="pages/tulum.html">Tulum</a></li>
+          <li><a href="pages/puerto-escondido.html">Puerto Escondido</a></li>
+          <li><a href="pages/colombia.html">Colombia</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Agencia</h5>
         <ul class="footer-links">
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="../index.html#cotizar">Cotizar Viaje</a></li>
-          <li><a href="../index.html#faq">Preguntas Frecuentes</a></li>
-          <li><a href="../index.html#contacto">Contacto</a></li>
+          <li><a href="pages/nosotros.html">Nosotros</a></li>
+          <li><a href="#cotizar">Cotizar Viaje</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Contacto</h5>
         <ul class="footer-links">
-          <li><a href="tel:+528441234567">+52 (844) 123-4567</a></li>
-          <li><a href="mailto:hola@shamantravel.mx">hola@shamantravel.mx</a></li>
-          <li><a href="#">Torreón, Coahuila</a></li>
+          <li><a href="tel:+5219981109237">+52 1 998 110 9237</a></li>
+          <li><a href="mailto:info@shaman.travel">info@shaman.travel</a></li>
+          <!-- <a href="https://wa.me/528449876543" class="whatsapp-footer-btn" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+          3341140707
+        </a> -->
+          <li><a href="#">Torreon, Coahuila</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Shaman Travel. Todos los derechos reservados.</p>
-      <p>Hecho con ♥ para viajeros apasionados</p>
+      <p>Hecho con amor para viajeros apasionados</p>
     </div>
   </div>
 </footer>

@@ -187,7 +187,7 @@ section { padding: 90px 0; }
       rgba(240,114,64,0.75) 70%,    /* orange */
       rgba(192,81,58,0.85) 100%     /* terracota */
     ),
-    url('../img/logo.png'); /* <-- coloca aquí tu imagen */
+    url('../img/logoSinfondo.png'); /* <-- coloca aquí tu imagen */
 
   background-size: cover;
   background-position: center;
@@ -640,8 +640,8 @@ section { padding: 90px 0; }
 /* IMAGENES DESTINOS */
 .dest-bg-cabos    { background-image: url('../img/destinos/loscabos.jpg'); }
 .dest-bg-cancun   { background-image: url('../img/destinos/cancun2.webp'); }
-.dest-bg-vallarta { background-image: url('../img/destinos/puertoVallarta.jpeg'); }
-.dest-bg-mazatlan { background-image: url('../img/destinos/mazatlan.webp'); }
+.dest-bg-vallarta { background-image: url('../img/destinos/puertoVallarta.jpg'); }
+.dest-bg-mazatlan { background-image: url('../img/destinos/mazatlan.jpg'); }
 .dest-bg-tulum    { background-image: url('../img/destinos/TULUM-1.jpg'); }
 .dest-bg-escondido{ background-image: url('../img/destinos/PUERTO\ ESCONDIDO-1.jpg'); }
 .dest-bg-colombia { background-image: url('../img/destinos/COLOMBIA-1.jpeg'); }
@@ -1141,7 +1141,7 @@ section { padding: 90px 0; }
 .nosotros-flex.reverse { direction: rtl; }
 .nosotros-flex.reverse > * { direction: ltr; }
 
-.nosotros-img {
+/* .nosotros-img {
   height: 420px;
   background: linear-gradient(135deg, #C0513A, #F07240);
   border-radius: 16px;
@@ -1150,8 +1150,24 @@ section { padding: 90px 0; }
   justify-content: center;
   font-size: 6rem;
   box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+} */
+ .nosotros-img {
+  flex: 1;
+  position: relative;
+ 
 }
-
+.nosotros-img img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: 0.4s ease;
+   background: linear-gradient(135deg, #C0513A, #F07240);
+}
+.nosotros-img img:hover {
+  transform: scale(1.03);
+}
 .nosotros-text h2 { font-size: 2.2rem; color: var(--text); margin-bottom: 16px; }
 
 .nosotros-text .sub-tag {

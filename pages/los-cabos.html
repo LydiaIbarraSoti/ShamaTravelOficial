@@ -10,27 +10,32 @@
 </head>
 <body>
 
+<!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobileNav">
-  <button class="close-btn" id="closeMenu"><i class="bi bi-x-lg"></i></button>
+  <button class="close-btn" id="closeMenu">
+    <i class="bi bi-x-lg"></i>
+  </button>
+
   <a href="../index.html">Inicio</a>
   <a href="nosotros.html">Nosotros</a>
   <a href="../index.html#destinos">Destinos</a>
   <a href="../index.html#cotizar">Cotizar</a>
-  <a href="../index.html#faq">FAQ</a>
+  <a href="faq.html">FAQ</a>
   <a href="../index.html#contacto">Contacto</a>
 </nav>
 
 <header class="navbar scrolled" id="navbar">
   <div class="nav-inner">
-    <a href="../index.html" class="logo">
-      <span class="logo-icon">🌿</span>
-      SHAMAN <span>TRAVEL</span>
+    <a href="../index.html">
+      <img src="../img/logoSinfondo.png" alt="Shaman Travel" class="logo-img">
+      <!-- <span class="logo-icon">🌿</span> -->
+      <!-- SHAMAN <span>TRAVEL</span> -->
     </a>
     <ul class="nav-links">
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a href="../index.html#destinos">Destinos</a></li>
-      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="faq.html">FAQ</a></li>
       <li><a href="../index.html#contacto">Contacto</a></li>
       <li><a href="../index.html#cotizar" class="btn-cotizar">Cotizar Viaje</a></li>
     </ul>
@@ -44,7 +49,7 @@
   <div class="container">
     <div class="dest-hero-tag">🇲🇽 Baja California Sur, México</div>
     <h1>Los Cabos</h1>
-    <p style="color: var(--secondary); font-size:1.1rem; font-style:italic; margin-bottom: 20px;">Donde el desierto abraza el Pacífico</p>
+    <p style="color: var(--white); font-size:1.1rem; font-style:italic; margin-bottom: 20px;">Donde el desierto abraza el Pacífico</p>
     <div class="dest-meta">
       <div class="dest-meta-item"><i class="bi bi-geo-alt"></i> Baja California Sur, México</div>
       <div class="dest-meta-item"><i class="bi bi-star-fill" style="color:var(--secondary)"></i> Destino Premium Shaman Travel</div>
@@ -71,48 +76,46 @@
         <div class="dest-section reveal">
           <h2>Lugares Turísticos Imperdibles</h2>
           <div class="places-grid">
-
-          <div class="place-card">
-            <div class="place-img">
-              <img src="../img/detalles_destinos/arco_san_lucas.jpg" alt="El Arco de Cabo San Lucas">
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/cabos/arco_san_lucas.jpg" alt="El Arco de Cabo San Lucas">
+              </div>
+              <div class="place-info">
+                <h3>El Arco de Cabo San Lucas</h3>
+                <p>Formación rocosa icónica donde se unen el Pacífico y el Mar de Cortés.</p>
+              </div>
             </div>
-            <div class="place-info">
-              <h3>El Arco de Cabo San Lucas</h3>
-              <p>Formación rocosa icónica donde se unen el Pacífico y el Mar de Cortés.</p>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/cabos/playa_amor.webp" alt="Playa del Amor">
+              </div>
+              <div class="place-info">
+                <h3>Playa del Amor</h3>
+                <p>Playa secreta accesible solo en lancha, con aguas cristalinas.</p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/cabos/OIP.webp" alt="Arrecife de Pelícano">
+              </div>
+              <div class="place-info">
+                <h3>Arrecife de Pelícano</h3>
+                <p>Sitio de snorkel y buceo con impresionante vida marina.</p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/cabos/mexico-colonial-streets-and-colorful-architecture-of-san-jose-cabo-in-historic-center-768x480.jpg" alt="San José del Cabo">
+              </div>
+              <div class="place-info">
+                <h3>San José del Cabo</h3>
+                <p>Centro histórico colonial con galerías de arte y restaurantes gourmet.</p>
+              </div>
             </div>
           </div>
-
-          <div class="place-card">
-            <div class="place-img">
-              <img src="../img/detalles_destinos/playa_amor.webp" alt="Playa del Amor">
-            </div>
-            <div class="place-info">
-              <h3>Playa del Amor</h3>
-              <p>Playa secreta accesible solo en lancha, con aguas cristalinas.</p>
-            </div>
-          </div>
-
-          <div class="place-card">
-            <div class="place-img">
-              <img src="../img/detalles_destinos/playa_amor.webp" alt="Arrecife de Pelícano">
-            </div>
-            <div class="place-info">
-              <h3>Arrecife de Pelícano</h3>
-              <p>Sitio de snorkel y buceo con impresionante vida marina.</p>
-            </div>
-          </div>
-
-          <div class="place-card">
-            <div class="place-img">
-              <img src="../img/detalles_destinos/playa_amor.webp" alt="San José del Cabo">
-            </div>
-            <div class="place-info">
-              <h3>San José del Cabo</h3>
-              <p>Centro histórico colonial con galerías de arte y restaurantes gourmet.</p>
-            </div>
-          </div>
-
-</div>
         </div>
 
         <!-- Recomendaciones -->
@@ -178,12 +181,12 @@
           Cotizar viaje a Los Cabos <i class="bi bi-arrow-right"></i>
         </a>
 
-        <div style="margin-top: 20px; text-align: center;">
+        <!-- <div style="margin-top: 20px; text-align: center;">
           <p style="font-size: 0.8rem; color: var(--text-light);">¿Tienes dudas? Escríbenos</p>
           <a href="https://wa.me/528449876543" style="color: #25D366; font-weight: 600; font-size: 0.9rem;">
             <i class="bi bi-whatsapp"></i> WhatsApp
           </a>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -195,42 +198,53 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo">🌿 SHAMAN <span>TRAVEL</span></div>
-        <p>Transformamos viajes en experiencias que cambian vidas. Más de 10 años conectando personas con destinos extraordinarios.</p>
+        <img src="../img/logoSinfondo.png" alt="Shaman Travel" class="footer-logo-img">
+        <p>Transformamos viajes en experiencias que cambian vidas. Mas de 10 años conectando personas con los destinos mas extraordinarios de Mexico.</p>
+        <br>
+        <div class="social-links">
+          <a href="https://www.facebook.com/shamantravelcancun"  class="facebook-footer-btn"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/shaman_travelmx/" class="instagram-footer-btn"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/5219981109237" class="whatsapp-footer-btn" target="_blank"><i class="bi bi-whatsapp"></i>            
+          <a href="https://www.tiktok.com/@shamantravel?lang=es-419" class="tiktok-footer-btn"><i class="bi bi-tiktok"></i></a>
+        </div>
       </div>
       <div class="footer-col">
         <h5>Destinos</h5>
         <ul class="footer-links">
-          <li><a href="los-cabos.html">Los Cabos</a></li>
-          <li><a href="cancun.html">Cancún</a></li>
-          <li><a href="puerto-vallarta.html">Puerto Vallarta</a></li>
-          <li><a href="mazatlan.html">Mazatlán</a></li>
-          <li><a href="tulum.html">Tulum</a></li>
-          <li><a href="puerto-escondido.html">Puerto Escondido</a></li>
-          <li><a href="colombia.html">Colombia</a></li>
+          <li><a href="pages/los-cabos.html">Los Cabos</a></li>
+          <li><a href="pages/cancun.html">Cancun</a></li>
+          <li><a href="pages/puerto-vallarta.html">Puerto Vallarta</a></li>
+          <li><a href="pages/mazatlan.html">Mazatlan</a></li>
+          <li><a href="pages/tulum.html">Tulum</a></li>
+          <li><a href="pages/puerto-escondido.html">Puerto Escondido</a></li>
+          <li><a href="pages/colombia.html">Colombia</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Agencia</h5>
         <ul class="footer-links">
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="../index.html#cotizar">Cotizar Viaje</a></li>
-          <li><a href="../index.html#faq">Preguntas Frecuentes</a></li>
-          <li><a href="../index.html#contacto">Contacto</a></li>
+          <li><a href="pages/nosotros.html">Nosotros</a></li>
+          <li><a href="#cotizar">Cotizar Viaje</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Contacto</h5>
         <ul class="footer-links">
-          <li><a href="tel:+528441234567">+52 (844) 123-4567</a></li>
-          <li><a href="mailto:hola@shamantravel.mx">hola@shamantravel.mx</a></li>
-          <li><a href="#">Torreón, Coahuila</a></li>
+          <li><a href="tel:+5219981109237">+52 1 998 110 9237</a></li>
+          <li><a href="mailto:info@shaman.travel">info@shaman.travel</a></li>
+          <!-- <a href="https://wa.me/528449876543" class="whatsapp-footer-btn" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+          3341140707
+        </a> -->
+          <li><a href="#">Torreon, Coahuila</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Shaman Travel. Todos los derechos reservados.</p>
-      <p>Hecho con ♥ para viajeros apasionados</p>
+      <p>Hecho con amor para viajeros apasionados</p>
     </div>
   </div>
 </footer>

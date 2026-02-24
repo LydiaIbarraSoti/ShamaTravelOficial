@@ -10,27 +10,32 @@
 </head>
 <body>
 
+<!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobileNav">
-  <button class="close-btn" id="closeMenu"><i class="bi bi-x-lg"></i></button>
+  <button class="close-btn" id="closeMenu">
+    <i class="bi bi-x-lg"></i>
+  </button>
+
   <a href="../index.html">Inicio</a>
   <a href="nosotros.html">Nosotros</a>
   <a href="../index.html#destinos">Destinos</a>
   <a href="../index.html#cotizar">Cotizar</a>
-  <a href="../index.html#faq">FAQ</a>
+  <a href="faq.html">FAQ</a>
   <a href="../index.html#contacto">Contacto</a>
 </nav>
 
 <header class="navbar scrolled" id="navbar">
   <div class="nav-inner">
-    <a href="../index.html" class="logo">
-      <span class="logo-icon">🌿</span>
-      SHAMAN <span>TRAVEL</span>
+    <a href="../index.html">
+      <img src="../img/logoSinfondo.png" alt="Shaman Travel" class="logo-img">
+      <!-- <span class="logo-icon">🌿</span> -->
+      <!-- SHAMAN <span>TRAVEL</span> -->
     </a>
     <ul class="nav-links">
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a href="../index.html#destinos">Destinos</a></li>
-      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="faq.html">FAQ</a></li>
       <li><a href="../index.html#contacto">Contacto</a></li>
       <li><a href="../index.html#cotizar" class="btn-cotizar">Cotizar Viaje</a></li>
     </ul>
@@ -43,8 +48,8 @@
   <div class="dest-hero-overlay"></div>
   <div class="container">
     <div class="dest-hero-tag">🇲🇽 Quintana Roo, México</div>
-    <h1>🏛️ Tulum</h1>
-    <p style="color: var(--secondary); font-size:1.1rem; font-style:italic; margin-bottom: 20px;">Misticismo maya a orillas del Caribe</p>
+    <h1>Tulum</h1>
+    <p style="color: var(--white); font-size:1.1rem; font-style:italic; margin-bottom: 20px;">Misticismo maya a orillas del Caribe</p>
     <div class="dest-meta">
       <div class="dest-meta-item"><i class="bi bi-geo-alt"></i> Quintana Roo, México</div>
       <div class="dest-meta-item"><i class="bi bi-star-fill" style="color:var(--secondary)"></i> Destino Premium Shaman Travel</div>
@@ -68,53 +73,60 @@
         </div>
 
         <!-- Lugares -->
-        <div class="dest-section reveal">
+         <div class="dest-section reveal">
           <h2>Lugares Turísticos Imperdibles</h2>
-          <ul class="places-list">
-            
-          <li>
-            <span class="place-icon">🏛️</span>
-            <div>
-              <div class="place-name">Zona Arqueológica de Tulum</div>
-              <div class="place-desc">El único sitio maya construido frente al Caribe; ruinas sobre acantilados de ensueño.</div>
+          <div class="places-grid">
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/tulum/Zona-arqueologica-Tulum.jpg" alt="Zona Arqueológica de Tulum">
+              </div>
+              <div class="place-info">
+                <h3>Zona Arqueológica de Tulum</h3>
+                <p>El único sitio maya construido frente al Caribe; ruinas sobre acantilados de ensueño.</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">💎</span>
-            <div>
-              <div class="place-name">Cenote Gran Cenote</div>
-              <div class="place-desc">El cenote más visitado de la zona, perfecto para snorkel y fotografía.</div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/tulum/Gran-Cenote-Tulum.jpg" alt="Cenote Gran Cenote">
+              </div>
+              <div class="place-info">
+                <h3>Cenote Gran Cenote</h3>
+                <p>El cenote más visitado de la zona, perfecto para snorkel y fotografía.</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">🌊</span>
-            <div>
-              <div class="place-name">Cenote Dos Ojos</div>
-              <div class="place-desc">Sistema de cuevas subacuáticas de 60 km — una de las maravillas del mundo.</div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/tulum/cenote-dos-ojos-snorkeling.jpg" alt="Cenote Dos Ojos">
+              </div>
+              <div class="place-info">
+                <h3>Cenote Dos Ojos</h3>
+                <p>Sistema de cuevas subacuáticas de 60 km — una de las maravillas del mundo.</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">🌿</span>
-            <div>
-              <div class="place-name">Sian Ka'an</div>
-              <div class="place-desc">Patrimonio de la Humanidad con ecosistemas vírgenes, flamencos y manatíes.</div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/tulum/sian-kaan-biosphere-reserve-guide.jpg" alt="Sian Ka'an">
+              </div>
+              <div class="place-info">
+                <h3>Sian Ka'an</h3>
+                <p>Patrimonio de la Humanidad con ecosistemas vírgenes, flamencos y manatíes.</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">🏖️</span>
-            <div>
-              <div class="place-name">Playa Paraíso</div>
-              <div class="place-desc">Considerada una de las playas más bellas del mundo por su turquesa perfecto.</div>
+
+            <div class="place-card">
+              <div class="place-img">
+                <img src="../img/detalles_destinos/tulum/shutterstock_747317491-scaled.jpg" alt="Playa Paraíso">
+              </div>
+              <div class="place-info">
+                <h3>Playa Paraíso</h3>
+                <p>Considerada una de las playas más bellas del mundo por su turquesa perfecto.</p>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="place-icon">🧘</span>
-            <div>
-              <div class="place-name">Zona Hotelera</div>
-              <div class="place-desc">Hoteles boutique eco-chic entre la selva y el mar con spas y gastronomía de autor.</div>
-            </div>
-          </li>
-          </ul>
+
+          </div>
         </div>
 
         <!-- Recomendaciones -->
@@ -180,12 +192,12 @@
           Cotizar viaje a Tulum <i class="bi bi-arrow-right"></i>
         </a>
 
-        <div style="margin-top: 20px; text-align: center;">
+        <!-- <div style="margin-top: 20px; text-align: center;">
           <p style="font-size: 0.8rem; color: var(--text-light);">¿Tienes dudas? Escríbenos</p>
           <a href="https://wa.me/528449876543" style="color: #25D366; font-weight: 600; font-size: 0.9rem;">
             <i class="bi bi-whatsapp"></i> WhatsApp
           </a>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -197,45 +209,57 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo">🌿 SHAMAN <span>TRAVEL</span></div>
-        <p>Transformamos viajes en experiencias que cambian vidas. Más de 10 años conectando personas con destinos extraordinarios.</p>
+        <img src="../img/logoSinfondo.png" alt="Shaman Travel" class="footer-logo-img">
+        <p>Transformamos viajes en experiencias que cambian vidas. Mas de 10 años conectando personas con los destinos mas extraordinarios de Mexico.</p>
+        <br>
+        <div class="social-links">
+          <a href="https://www.facebook.com/shamantravelcancun"  class="facebook-footer-btn"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/shaman_travelmx/" class="instagram-footer-btn"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/5219981109237" class="whatsapp-footer-btn" target="_blank"><i class="bi bi-whatsapp"></i>            
+          <a href="https://www.tiktok.com/@shamantravel?lang=es-419" class="tiktok-footer-btn"><i class="bi bi-tiktok"></i></a>
+        </div>
       </div>
       <div class="footer-col">
         <h5>Destinos</h5>
         <ul class="footer-links">
-          <li><a href="los-cabos.html">Los Cabos</a></li>
-          <li><a href="cancun.html">Cancún</a></li>
-          <li><a href="puerto-vallarta.html">Puerto Vallarta</a></li>
-          <li><a href="mazatlan.html">Mazatlán</a></li>
-          <li><a href="tulum.html">Tulum</a></li>
-          <li><a href="puerto-escondido.html">Puerto Escondido</a></li>
-          <li><a href="colombia.html">Colombia</a></li>
+          <li><a href="pages/los-cabos.html">Los Cabos</a></li>
+          <li><a href="pages/cancun.html">Cancun</a></li>
+          <li><a href="pages/puerto-vallarta.html">Puerto Vallarta</a></li>
+          <li><a href="pages/mazatlan.html">Mazatlan</a></li>
+          <li><a href="pages/tulum.html">Tulum</a></li>
+          <li><a href="pages/puerto-escondido.html">Puerto Escondido</a></li>
+          <li><a href="pages/colombia.html">Colombia</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Agencia</h5>
         <ul class="footer-links">
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="../index.html#cotizar">Cotizar Viaje</a></li>
-          <li><a href="../index.html#faq">Preguntas Frecuentes</a></li>
-          <li><a href="../index.html#contacto">Contacto</a></li>
+          <li><a href="pages/nosotros.html">Nosotros</a></li>
+          <li><a href="#cotizar">Cotizar Viaje</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Contacto</h5>
         <ul class="footer-links">
-          <li><a href="tel:+528441234567">+52 (844) 123-4567</a></li>
-          <li><a href="mailto:hola@shamantravel.mx">hola@shamantravel.mx</a></li>
-          <li><a href="#">Torreón, Coahuila</a></li>
+          <li><a href="tel:+5219981109237">+52 1 998 110 9237</a></li>
+          <li><a href="mailto:info@shaman.travel">info@shaman.travel</a></li>
+          <!-- <a href="https://wa.me/528449876543" class="whatsapp-footer-btn" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+          3341140707
+        </a> -->
+          <li><a href="#">Torreon, Coahuila</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Shaman Travel. Todos los derechos reservados.</p>
-      <p>Hecho con ♥ para viajeros apasionados</p>
+      <p>Hecho con amor para viajeros apasionados</p>
     </div>
   </div>
 </footer>
+
 
 <div id="toast" class="toast"></div>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
