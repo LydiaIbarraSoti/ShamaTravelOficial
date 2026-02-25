@@ -640,11 +640,11 @@ section { padding: 90px 0; }
 /* IMAGENES DESTINOS */
 .dest-bg-cabos    { background-image: url('../img/destinos/loscabos.jpg'); }
 .dest-bg-cancun   { background-image: url('../img/destinos/cancun2.webp'); }
-.dest-bg-vallarta { background-image: url('../img/destinos/puertoVallarta.jpg'); }
+.dest-bg-vallarta { background-image: url('../img/destinos/puertoVallarta.webp'); }
 .dest-bg-mazatlan { background-image: url('../img/destinos/mazatlan.jpg'); }
-.dest-bg-tulum    { background-image: url('../img/destinos/TULUM-1.jpg'); }
-.dest-bg-escondido{ background-image: url('../img/destinos/PUERTO\ ESCONDIDO-1.jpg'); }
-.dest-bg-colombia { background-image: url('../img/destinos/COLOMBIA-1.jpeg'); }
+.dest-bg-tulum    { background-image: url('../img/destinos/TULUM-1.webp'); }
+.dest-bg-escondido{ background-image: url('../img/destinos/PUERTO\ ESCONDIDO-1.webp') }
+.dest-bg-colombia { background-image: url('../img/destinos/COLOMBIA-1.webp'); }
 
 /* ===== COTIZAR ===== */
 .cotizar {
