@@ -112,47 +112,20 @@
 
 
 <!-- COTIZAR -->
-<section id="cotizar" class="quote-section">
-  <div class="quote-box">
-
-    <div class="quote-grid">
-
-      <div class="field">
-        <label>¿A dónde quieres viajar?</label>
-        <input type="text" placeholder="Ingresa el destino">
+<section id="cotizar" class="quote-cta-section">
+  <div class="container">
+    <div class="quote-cta-box">
+      <div class="quote-cta-content">
+        <span class="quote-cta-tag">✦ Tu próxima aventura te espera</span>
+        <h2>¿Lista para tu aventura?</h2>
+        <p>Cotiza ahora mismo y déjanos crear el viaje de tus sueños</p>
+        <a href="https://reservas.shaman.travel" class="btn-cta-grande">
+          <i class="bi bi-arrow-right"></i>
+          Cotizar Ahora Mismo
+          <i class="bi bi-arrow-left"></i>
+        </a>
       </div>
-
-      <div class="field small">
-        <label>Desde</label>
-        <input type="date">
-      </div>
-
-      <div class="field small">
-        <label>Hasta</label>
-        <input type="date">
-      </div>
-
-      <div class="field small">
-        <label>Adultos</label>
-        <input type="number" value="2" min="1">
-      </div>
-
-      <div class="field small">
-        <label>Menores</label>
-        <input type="number" value="0" min="0">
-      </div>
-
-      <div class="field">
-        <label>Nacionalidad</label>
-        <input type="text" placeholder="México">
-      </div>
-
     </div>
-
-    <div class="quote-button">
-      <button class="btn-primary">Buscar</button>
-    </div>
-
   </div>
 </section>
 
@@ -377,26 +350,27 @@
         </div> -->
       </div>
       <div class="contact-form reveal reveal-delay-2">
-        <h4>Envianos un mensaje</h4>
+        <h4>Envianos un mensaje</h4>        
         <form id="contactForm">
           <div class="cf-group">
             <label>Nombre completo</label>
-            <input type="text" placeholder="Tu nombre" required>
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
           </div>
           <div class="cf-group">
-            <label>Correo electronico</label>
-            <input type="email" placeholder="tucorreo@ejemplo.com" required>
+            <label>Telefono</label>
+           <input type="tel" id="telefono" placeholder="Tu teléfono" pattern="[0-9]{10}" required>
           </div>
-          <div class="cf-group">
+          <!-- <div class="cf-group">
             <label>Asunto</label>
-            <input type="text" placeholder="En que podemos ayudarte?">
-          </div>
+            <input type="text" placeholder="En que podemos ayudarte?" name="asunto">
+          </div> -->
           <div class="cf-group">
             <label>Mensaje</label>
-            <textarea rows="5" placeholder="Cuentanos sobre tu consulta..." required></textarea>
+            <textarea rows="5" id="mensaje" placeholder="Cuéntanos sobre el viaje que deseas..." required ></textarea>
           </div>
-          <button type="submit" class="btn-send">Enviar Mensaje</button>
+          <button type="submit" class="btn-send">Enviar por WhatsApp</button>
         </form>
+       
       </div>
     </div>
   </div>

@@ -108,24 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1500);
     });
   }
-
-  // ===== CONTACT FORM SUBMIT =====
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = contactForm.querySelector('.btn-send');
-      btn.textContent = 'Enviando...';
-      btn.disabled = true;
-      setTimeout(() => {
-        showToast('Mensaje enviado correctamente ✦');
-        contactForm.reset();
-        btn.textContent = 'Enviar Mensaje';
-        btn.disabled = false;
-      }, 1500);
-    });
-  }
-
   // ===== TOAST =====
   window.showToast = (msg) => {
     let toast = document.getElementById('toast');
@@ -180,5 +162,26 @@ document.addEventListener('DOMContentLoaded', () => {
       showSlide(current);
     }, 6000);
   }
+
+  // BOTON PARA MANDAR COTIZAION POR WHATSAPP
+  document.getElementById('contactForm').addEventListener('submit', function (e) 
+  {  
+    e.preventDefault();   
+   
+    const nombre = document.getElementById('nombre').value.trim();    
+    const telefono = document.getElementById('telefono').value.trim();
+    const texto = document.getElementById('mensaje').value.trim();   
+
+    if (!nombre || !telefono || !texto) {
+      alert("Por favor completa todos los campos obligatorios.");
+      return;
+    }
+
+    let mensaje = `¡Hola! Soy ${nombre}, mi teléfono es ${telefono}. Mensaje:  ${texto}.\n\n`;   
+
+    const numeroWhatsApp = "529981109237"; // ← tu número
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  });
 
 });
