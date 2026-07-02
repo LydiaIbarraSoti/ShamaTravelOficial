@@ -127,6 +127,20 @@
           </ul>
         </div>
 
+        <!-- Carrusel de viajeros -->
+        <div class="dest-section reveal">
+          <h2>Galería de Nuestros Viajeros</h2>
+          <p class="tgal-intro">Momentos reales de quienes ya vivieron Los Cabos con Shaman Travel. ✨</p>
+          <div class="tgal">
+            <div class="tgal-viewport">
+              <div class="tgal-track" id="tgalTrack"></div>
+            </div>
+            <button class="tgal-arrow tgal-prev" id="tgalPrev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+            <button class="tgal-arrow tgal-next" id="tgalNext" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
+            <div class="tgal-dots" id="tgalDots"></div>
+          </div>
+        </div>
+
         <!-- CTA volver -->
         <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
           <a href="../index.html#destinos" class="btn-outline" style="color: var(--primary); border-color: rgba(26,58,42,0.3);">
@@ -249,6 +263,29 @@
     </div>
   </div>
 </footer>
+<script>
+  // Fotos de viajeros de Cancún. Para agregar una: colócala en img/galeria/cancun/
+  // y añade una línea aquí.
+  window.fotosViajeros = [
+    { img: '../img/galeria/cabos/img1.jpeg', nombre: 'Arco de Piedra', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img2.jpeg', nombre: '', desc: 'Krystal Grand · Ago 2025' },
+    { img: '../img/galeria/cabos/img3.jpeg', nombre: 'Todos Santos', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img4.jpeg', nombre: 'Todos Santos', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img5.jpeg', nombre: 'Hotel California', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img6.jpeg', nombre: '', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img7.jpeg', nombre: 'Playa Balandra', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img8.jpeg', nombre: '', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img9.jpeg', nombre: 'Arco de Piedra', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img10.jpeg', nombre: 'Varco Pirata', desc: 'Capitan Hook Ago 2025' },
+    { img: '../img/galeria/cabos/img11.jpeg', nombre: 'Sunset', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img12.jpeg', nombre: 'Sunset', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img13.jpeg', nombre: 'Los Cabos', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img14.jpeg', nombre: 'Columpio Krystal Grand', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img15.jpeg', nombre: 'Krystal Grand', desc: 'Ago 2025' },
+    { img: '../img/galeria/cabos/img16.jpeg', nombre: 'Krystal Grand', desc: 'Ago 2025' },
+    // ← agrega más fotos aquí
+  ];
+</script>
 
 <div id="toast" class="toast"></div>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
