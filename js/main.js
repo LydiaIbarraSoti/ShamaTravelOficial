@@ -43,11 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }
 
-  
-  
-    
- 
-
   // ===== FAQ ACCORDION =====
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
@@ -163,6 +158,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 6000);
   }
 
+  // ===== CARRUSEL DE VIAJEROS (galería por destino) =====
+  (function initGaleriaViajeros() {
+    const track = document.getElementById('tgalTrack');
+    if (!track) return; // esta página no tiene galería
+
+    // Las fotos se definen en cada HTML con:  window.fotosViajeros = [...]
+    const fotos = window.fotosViajeros || [];
+    if (!fotos.length) return;
+
+    const prevBtn = document.getElementById('tgalPrev');
+    const nextBtn = document.getElementById('tgalNext');
+    const dotsWrap = document.getElementById('tgalDots');
+    const GAP = 16;
+    let index = 0;
+
+    fotos.forEach((f, i) => {
+      const s = document.createElement('div');
+      s.className = 'tgal-slide';
+      s.dataset.i = i;
+      s.innerHTML =
+        '<img src="' + f.img + '" alt="' + (f.nombre || 'Viajero') + '" loading="lazy">' +
+        '<div class="tgal-cap"><div class="n">' + (f.nombre || '') + '</div><div class="d">' + (f.desc || '') + '</div></div>';
+      track.appendChild(s);
+    });
+    const slides = Array.from(track.children);
+
+    const perView = () => window.innerWidth <= 560 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+    const maxIndex = () => Math.max(0, slides.length - perView());
+    const step = () => slides[0].getBoundingClientRect().width + GAP;
+
+    function update() {
+      index = Math.min(index, maxIndex());
+      track.style.transform = 'translateX(' + (-index * step()) + 'px)';
+      prevBtn.disabled = index <= 0;
+      nextBtn.disabled = index >= maxIndex();
+      Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      for (let i = 0; i <= maxIndex(); i++) {
+        const b = document.createElement('button');
+        b.className = 'tgal-dot' + (i === index ? ' active' : '');
+        b.addEventListener('click', () => { index = i; update(); });
+        dotsWrap.appendChild(b);
+      }
+    }
+
+    prevBtn.addEventListener('click', () => { index--; update(); });
+    nextBtn.addEventListener('click', () => { index++; update(); });
+
+    let timer = setInterval(auto, 5000);
+    function auto() { index = index >= maxIndex() ? 0 : index + 1; update(); }
+    const wrap = track.closest('.tgal');
+    wrap.addEventListener('mouseenter', () => clearInterval(timer));
+    wrap.addEventListener('mouseleave', () => timer = setInterval(auto, 5000));
+
+    const lb = document.createElement('div');
+    lb.className = 'tgal-lb';
+    lb.innerHTML = '<button class="tgal-lb-close" aria-label="Cerrar"><i class="bi bi-x-lg"></i></button><img src="" alt="">';
+    document.body.appendChild(lb);
+    const lbImg = lb.querySelector('img');
+    slides.forEach(s => s.addEventListener('click', () => { lbImg.src = fotos[s.dataset.i].img; lb.classList.add('open'); }));
+    lb.addEventListener('click', e => { if (e.target !== lbImg) lb.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+
+    let rt;
+    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { buildDots(); update(); }, 150); });
+
+    buildDots();
+    update();
+  })();
+
   // BOTON PARA MANDAR COTIZAION POR WHATSAPP
   document.getElementById('contactForm').addEventListener('submit', function (e) 
   {  
@@ -183,5 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
   });
+
+  
+
 
 });

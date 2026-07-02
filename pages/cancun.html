@@ -150,6 +150,20 @@
           </ul>
         </div>
 
+        <!-- Carrusel de viajeros -->
+        <div class="dest-section reveal">
+          <h2>Galería de Nuestros Viajeros</h2>
+          <p class="tgal-intro">Momentos reales de quienes ya vivieron Cancún con Shaman Travel. ✨</p>
+          <div class="tgal">
+            <div class="tgal-viewport">
+              <div class="tgal-track" id="tgalTrack"></div>
+            </div>
+            <button class="tgal-arrow tgal-prev" id="tgalPrev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+            <button class="tgal-arrow tgal-next" id="tgalNext" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
+            <div class="tgal-dots" id="tgalDots"></div>
+          </div>
+        </div>
+
         <!-- CTA volver -->
         <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
           <a href="../index.html#destinos" class="btn-outline" style="color: var(--primary); border-color: rgba(26,58,42,0.3);">
@@ -272,9 +286,21 @@
     </div>
   </div>
 </footer>
-
+<script>
+  // Fotos de viajeros de Cancún. Para agregar una: colócala en img/galeria/cancun/
+  // y añade una línea aquí.
+  window.fotosViajeros = [
+    { img: '../img/galeria/cancun/cancun1.jpeg', nombre: 'Familia Narvaez', desc: 'Grand Oasis · May 2026' },
+    { img: '../img/galeria/cancun/cancun2.jpeg',       desc: 'Chichen-Itza · May 2026' },
+    { img: '../img/galeria/cancun/viajero3.jpg', nombre: 'Grupo Torreón',   desc: 'Chichén Itzá · Dic 2024' },
+    { img: '../img/galeria/cancun/viajero4.jpg', nombre: 'Sofía R.',        desc: 'Xcaret · Nov 2024' },
+    { img: '../img/galeria/cancun/viajero5.jpg', nombre: 'Los Martínez',    desc: 'MUSA · Oct 2024' },
+    // ← agrega más fotos aquí
+  ];
+</script>
 <div id="toast" class="toast"></div>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script src="../js/main.js"></script>
 <script>AOS.init({ duration: 800, once: true });</script>
 </body>
